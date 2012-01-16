@@ -9,7 +9,14 @@ If you want to learn more about how useful hooks can be, I recommend reading [Wh
 To use a hook, copy (or link) it into `.git/hooks/` at the root of a repository.
 
 ##Help
+###General
 For a list and descriptions of all hooks, run the following command in a terminal:
 
     $ git help hooks
 
+###pre-commit
+To commit changes without running the pre-commit hook, run:
+
+    $ git commit --no-verify
+
+You may want to use `--no-verify` if the hook catches an intentional print statement in a python file.
