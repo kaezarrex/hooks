@@ -15,6 +15,13 @@ modified = re.compile('^(?:M|A)(\s+)(?P<name>.*)')
 
 CHECKS = [
     {
+        'output': 'PEP 8...',
+        'command': 'pep8 %s',
+        'match_files': ['.*\.py$'],
+        'ignore_files': [],
+        'print_filename': True,
+    },
+    {
         'output': 'Checking for print statements...',
         'command': 'grep -n print %s',
         'match_files': ['.*\.py$'],
